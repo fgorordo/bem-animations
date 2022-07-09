@@ -1,0 +1,186 @@
+/* Normalize + Reset*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Solo fixea margenes del body */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Bloque independiente */
+.main-nav {
+  background-color: #333;
+}
+
+.main-menu {
+  /* Reset de estilos para menu */
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  /* Aca van los estilos del menu */
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main-menu__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: royalblue;
+  letter-spacing: 5px;
+  padding: 0.5rem 0;
+  line-height: 4rem;
+}
+
+/* Modificadores heredan propiedades */
+.main-menu__link--active {
+  border-bottom: 2px solid;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button--dark {
+  background-color: #333;
+  color: royalblue
+}
+
+.button--red {
+  background-color: red;
+  color: white;
+}
+
+.button--ghost {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.button--yellow {
+  background-color: yellow;
+  color: black;
+  border: 1px solid;
+}
+
+.button--large {
+  width: 100%;
+}
+
+.img-container {
+  position: relative; /* Para que los elementos ::after y ::before se coloquen sobre el*/
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.img-container::before,
+.img-container::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(28,28,28,0.8);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.img-container::after {
+  content: 'DORMITORIO LINDO';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+/* Animación de Scale */
+.img-container--scale::after,
+.img-container--scale::before {
+  transform: scale(0);
+}
+
+/* Trigger de scale */
+.img-container--scale:hover.img-container::after,
+.img-container--scale:hover.img-container::before {
+  transform: scale(1);
+}
+
+/* Animación de TraslateX */
+.img-container--translateX::after,
+.img-container--translateX::before {
+  transform: translateX(-100%);
+}
+
+/* Trigger de translateX */
+.img-container--translateX:hover.img-container::after,
+.img-container--translateX:hover.img-container::before {
+  transform: translateX(0);
+}
+
+/* Animación de TraslateX */
+.img-container--translateY::after,
+.img-container--translateY::before {
+  transform: translateY(-100%);
+}
+
+/* Trigger de translateY */
+.img-container--translateY:hover.img-container::after,
+.img-container--translateY:hover.img-container::before {
+  transform: translateY(0);
+}
+
+/* Color filter effect */
+/* Removiendo animaciones anteriores */
+.img-container--filter::before,
+.img-container--filter::after {
+  content: unset;
+}
+
+/* Cambiando el color */
+.img-container--filter {
+  filter: grayscale(1);
+  transition: filter 0.3s;
+}
+
+.img-container--filter:hover {
+  filter: grayscale(0)
+}
+
+/* Opacity effect */
+
+.img-container--opacidad::after,
+.img-container--opacidad::before {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.img-container--opacidad:hover.img-container::after,
+.img-container--opacidad:hover.img-container::before {
+  opacity: 1;
+}
+
+/* Las imagenes no admiten pseudo-elementos */
+.img {
+  max-width: 100%;
+  /* Centrar la imagen (No es elemento block ni inline */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

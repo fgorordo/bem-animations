@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Taller B.E.M</title>
+</head>
+
+<body>
+
+  <!-- BEM -->
+  <!-- Block (Elemento contenedor de todos los elementos "Bloque padre")-->
+  <!-- Element -->
+  <!-- Modifier -->
+
+  <!-- Estructura de un menu -->
+  <nav class="main-nav">
+    <ul class="main-menu" id="main-menu">
+      <!--Block-->
+
+      <!-- Item 1 -->
+      <li class="main-menu__item">
+        <!--Element-->
+        <a href="#" class="main-menu__link main-menu__link--active">Item 1</a>
+        <!--Element-->
+      </li>
+
+      <!-- Item 2 -->
+      <li class="main-menu__item">
+        <!--Element-->
+        <a href="#" class="main-menu__link">Item 2</a>
+        <!--Element-->
+      </li>
+
+      <!-- Item 3 -->
+      <li class="main-menu__item">
+        <!--Element-->
+        <a href="#" class="main-menu__link">Item 3</a>
+        <!--Element-->
+      </li>
+
+      <!-- Item 4 -->
+      <li class="main-menu__item">
+        <!--Element-->
+        <a href="#" class="main-menu__link">Item 4</a>
+        <!--Element-->
+      </li>
+    </ul>
+  </nav>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio est ipsam iste adipisci quos vero quibusdam
+    suscipit, nemo repellendus eveniet, aliquid reprehenderit ipsa quod nobis earum numquam commodi consequuntur
+    voluptates dicta natus omnis? Error exercitationem vero animi aliquam, perferendis voluptatibus tempore, optio quis
+    alias in necessitatibus quos accusamus. Dolorem, provident?
+  </p>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi animi pariatur repudiandae eos, et fugit qui aut repellat voluptatem nobis modi veniam eligendi expedita fuga quibusdam vel aliquam nulla ipsa suscipit? Iste eaque repudiandae labore ad error sunt repellat suscipit, eius placeat perspiciatis nulla, doloremque hic rerum unde tempore rem.
+  </p>
+  <div class="buttons">
+    <button class="button button--dark">Boton 1</button>
+    <button class="button button--red">Boton 2</button>
+    <button class="button button--ghost">Boton 3</button>
+    <button class="button button--yellow">Boton 4</button>
+  </div>
+  <div class="img-container img-container--scale">
+    <img src="img_test.jpg" alt="Imagen de prueba" class="img">
+  </div>
+
+  <div class="img-container img-container--translateX">
+    <img src="img_test.jpg" alt="Imagen de prueba" class="img">
+  </div>
+
+  <div class="img-container img-container--translateY">
+    <img src="img_test.jpg" alt="Imagen de prueba" class="img">
+  </div>
+
+  <div class="img-container img-container--filter">
+    <img src="img_test.jpg" alt="Imagen de prueba" class="img">
+  </div>
+
+  <div class="img-container img-container--opacidad">
+    <img src="img_test.jpg" alt="Imagen de prueba" class="img">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
