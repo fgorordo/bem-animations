@@ -52,7 +52,7 @@ body {
 
 .button {
   padding: 0.5rem 0.8rem;
-  border-radius: 10px;
+  border-radius: 15px;
   border: none;
   outline: none;
   text-transform: uppercase;
@@ -60,8 +60,8 @@ body {
 }
 
 .button--dark {
-  background-color: #333;
-  color: royalblue
+  background-color: #1c1c1c;
+  color: #fff;
 }
 
 .button--red {
@@ -176,6 +176,7 @@ body {
   opacity: 1;
 }
 
+
 /* Las imagenes no admiten pseudo-elementos */
 .img {
   max-width: 100%;
@@ -183,4 +184,64 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.card {
+  width: 350px;
+  background-color: #e5e5e5;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  box-shadow: 0 0 10px 5px rgba(28,28,28,0.8);
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+
+.card__figure {
+  margin: 0;
+}
+
+.card__img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 2px #747474;
+  border: 1px solid #000;
+}
+
+.card__figcaption {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
+}
+
+.form {
+  width: 350px;
+  background-color: #e5e5e5;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  box-shadow: 0 0 10px 5px rgba(28,28,28,0.8);
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+
+.form__field {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  max-width: 80%;
+}
+
+.form__input {
+  width: 100%;
+  border-radius: 15px;
+  border: unset;
+  height: 35px;
+  border: 1px solid;
+  padding: 0.8rem 0.5rem;
 }
